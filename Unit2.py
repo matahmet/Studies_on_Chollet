@@ -60,6 +60,34 @@ plt.imshow(digit,cmap=plt.cm.binary)
 
 plt.show()
 
+import numpy as np
+
+#test
+
+def test(x):
+    
+    assert x>10
+    
+    return np.sqrt(x)
+
+
+
+def test1(a):
+    a+=1
+    return a
+    
+
+x=5
+
+m=np.random.randint(1,300,size=120)
+m1=m.reshape((30,4))
+m2=m.reshape((15,2,4))
+m3=m.reshape((5,3,2,4))
+m4=m.reshape((5,4,3,2))
+
+
+n=np.random.randint(1,300,size=(2,3,3))
+n1=n.reshape(2,3*3)
 
 
 
