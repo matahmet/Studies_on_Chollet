@@ -27,6 +27,9 @@ word_index["islam"]
 word_index["of"]
 word_index["ken"]
 
+word_index["should"]
+word_index["br"]
+
 len(df[0][0][0])
 len(set(df[0][0][0]))
 
@@ -34,3 +37,64 @@ len(set(df[0][0][0]))
 
 len(train_data[0])
 len(set(train_data[0]))
+
+reverse_word_index=dict([(value,key) for (key,value) in word_index.items() ]  )
+reverse_word_index[1]
+reverse_word_index[2]
+reverse_word_index[3]
+reverse_word_index[4]
+reverse_word_index[5]
+reverse_word_index[6]
+
+reverse_word_index[9999]
+reverse_word_index[9998]
+reverse_word_index[9997]
+reverse_word_index[10000]
+reverse_word_index[10001]
+
+train_data[0]
+
+max(train_data[0])
+
+
+decoded_review=' '.join([reverse_word_index.get(i-3,'?') for i in train_data[20]])
+decoded_review
+
+decoded_review=' '.join([reverse_word_index.get(i-3,'?') for i in train_data[230]])
+decoded_review
+
+import numpy as np
+
+def vectorize_sequence(sequences,dimension=10000):
+    results=np.zeros((len(sequences),dimension))
+    for i, sequence in enumerate(sequences):
+        results[i,sequence]=1
+    
+    return results
+    
+            
+  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
