@@ -71,12 +71,35 @@ def vectorize_sequence(sequences,dimension=10000):
         results[i,sequence]=1
     
     return results
-    
-            
-  
-            
-            
-            
+
+x_train=vectorize_sequence(train_data)       
+
+x_test=vectorize_sequence(test_data)  
+
+x_train[5]
+x_train[4]    
+
+y_train=np.asarray(train_labels).astype('float32')
+y_test=np.asarray(test_labels).astypes('float32')
+
+#model definition
+from keras import models
+from keras import layers
+
+model=models.Sequential()
+model.add(layers.Dense(16,activation='relu',input_shape=(10000,)))
+model.add(layers.Dense(16,activation='relu'))
+
+model.compile(optimizer='rmsprop',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+
+from keras import optimizers
+
+model.compile(optimizers=optimizers.RMSprop(lr=0.001),
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+
             
             
             
